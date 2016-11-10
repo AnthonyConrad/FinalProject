@@ -31,4 +31,14 @@ function RandomInt(low, high)
 function playGame(){
     playerCardOne = RandomInt(1,13);
     playerCardTwo = RandomInt(14, 17);
+    dealerCardOne = RandomInt(1,13);
+    dealerCardTwo = RandomInt(14,17);
+    if (playerCardOne === dealerCardOne){
+        playGame();
+    }else{
+        document.getElementById("pCardOne").innerHTML = playerCardOne;
+        document.getElementById("pCardTwo").innerHTML = playerCardTwo;
+        document.getElementById("dCardOne").innerHTML = dealerCardOne;
+        document.getElementById("dCardOne").innerHTML = dealerCardTwo;
+    }
 }
