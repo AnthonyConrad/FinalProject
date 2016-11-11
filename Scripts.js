@@ -18,8 +18,12 @@ var clubs = 16;
 var diamond = 17;
 var playerCardOne;
 var playerCardTwo;
+var playerCardThree;
+var playerCardFour;
 var dealerCardOne;
 var dealerCardTwo;
+var dealerCardThree;
+var dealerCardFour;
 
 
 function RandomInt(low, high)
@@ -33,12 +37,18 @@ function playGame(){
     playerCardTwo = RandomInt(14, 17);
     dealerCardOne = RandomInt(1,13);
     dealerCardTwo = RandomInt(14,17);
-    if (playerCardOne === dealerCardOne){
+    if (playerCardOne === dealerCardOne) {
+        playGame();
+    }else if
+         (playerCardOne === dealerCardThree){
+        playGame();
+    }else if
+    (playerCardThree === dealerCardThree){
         playGame();
     }else{
-        document.getElementById("pCardOne").innerHTML = playerCardOne;
-        document.getElementById("pCardTwo").innerHTML = playerCardTwo;
-        document.getElementById("dCardOne").innerHTML = dealerCardOne;
-        document.getElementById("dCardOne").innerHTML = dealerCardTwo;
+
+
     }
+
+
 }
