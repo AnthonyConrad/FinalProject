@@ -45,10 +45,13 @@ function playGame(){
     }else if
     (playerCardThree === dealerCardThree){
         playGame();
-    }else{
+    }else if
+    (playerCardThree === dealerCardOne){
+        playGame();
+    } else 
 
 
-    }
+
 
 
 }
