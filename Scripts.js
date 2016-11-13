@@ -1,4 +1,3 @@
-
 var ace = 1;
 var two = 2;
 var three = 3;
@@ -26,11 +25,15 @@ var dealerCardThree;
 var dealerCardFour;
 
 
+function money(){
+    var moneys = document.getElementById("txtMoney").value;
+    document.getElementById("x").innerHTML = "$" + moneys;
+}
+
 function RandomInt(low, high)
 {
     return Math.floor(Math.random()*(high - low + 1)) + low;
 }
-
 
 function playGame(){
     playerCardOne = RandomInt(1,13);
@@ -39,19 +42,23 @@ function playGame(){
     dealerCardTwo = RandomInt(14,17);
     if (playerCardOne === dealerCardOne) {
         playGame();
-    }else if
-         (playerCardOne === dealerCardThree){
+    }else if (playerCardOne === dealerCardThree) {
         playGame();
-    }else if
-    (playerCardThree === dealerCardThree){
+    }else if (playerCardThree === dealerCardThree) {
         playGame();
-    }else if
-    (playerCardThree === dealerCardOne){
+    }else if     (playerCardThree === dealerCardOne) {
         playGame();
-    } else 
-
-
-
-
-
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
