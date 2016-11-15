@@ -23,10 +23,13 @@ var dealerCardOne;
 var dealerCardTwo;
 var dealerCardThree;
 var dealerCardFour;
-
+var max = 15000;
 
 function money(){
     var moneys = document.getElementById("txtMoney").value;
+    if (moneys < max){
+        moneys == "15000";
+    }
     document.getElementById("x").innerHTML = "$" + moneys;
 }
 
@@ -40,6 +43,11 @@ function playGame(){
     playerCardTwo = RandomInt(14, 17);
     dealerCardOne = RandomInt(1,13);
     dealerCardTwo = RandomInt(14,17);
+    playerCardThree = RandomInt(1,13);
+    playerCardFour = RandomInt(14,17);
+    dealerCardThree = RandomInt(1,13);
+    dealerCardFour = RandomInt(14,17);
+
     if (playerCardOne === dealerCardOne) {
         playGame();
     }else if (playerCardOne === dealerCardThree) {
