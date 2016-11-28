@@ -7,14 +7,15 @@
 </head>
 <body>
 <h2>Black Jack</h2>
+<p>    <tr><td><input type = "button" value = "Play" onclick="playGame();"></td></tr></p>
 <table>
-    <tr><td>Money you want to start with</td>		<td><input type="Text" id="txtMoney" size = 15></td></tr>
-    <tr><td>Note: you can only have up too $15,000 to start out with.</td></tr>
-    <tr><td><input type = "button" value = "show money" onClick="money();"></td></tr>
-    <tr><td><input type = "button" value = "Play" onclick="playGame();"></td></tr>
+    <tr><td>Dealers Cards</td>  <td><div id = "dealersCards"></div></td></tr>
     <tr><td>Player Cards</td>   <td><div id = "playerCards"></div> </td></tr>
     <tr><td>Players Money</td>	<td><div id ="x"></div></td></tr>
 </table>
+
+<p><input type = "button" value = "hit" onclick = "hit();"><input type = "button" value = "Stay" onclick = "stay();">
+<input type = "button" value = "Double Down" onclick = "double();"></p>
 
 
 
