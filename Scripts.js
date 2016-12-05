@@ -1,17 +1,38 @@
+var suits = ["dummy","Spade","Hearts","Clubs","Diamonds"];
+var numbers = ["dummy","Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"];
 
-function playGame() {
-    var suits = ["hearts", "diamonds", "spades", "clubs"];
-    var cards = ["ace", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king"];
-    var dealerCardOne = cards[Math.floor(Math.random() * cards.length)];
-    var dealerCardTwo = suits[Math.floor(Math.random() * suits.length)];
-    var dealerCardThree = cards[Math.floor(Math.random() * cards.length)];
-    var dealerCardFour = suits[Math.floor(Math.random() * suits.length)];
-    var playerCardOne = cards[Math.floor(Math.random() * cards.length)];
-    var playerCardTwo = suits[Math.floor(Math.random() * suits.length)];
-    var playerCardThree = cards[Math.floor(Math.random() * cards.length)];
-    var playerCardFour = suits[Math.floor(Math.random() * suits.length)];
-    var playerHand = playerCardOne + "of" + playerCardTwo + "and" + playerCardThree + "of" + playerCardFour;
-    var dealerHand = dealerCardOne + "of" + dealerCardTwo + "and" + dealerCardThree + "of" + dealerCardFour;
-    document.getElementById("playerCards").innerHTML = playerHand;
-    document.getElementById("dealersCards").innerHTML = dealerHand;
+
+function Card(s,n)
+{
+    var suit = s;
+    var number = n;
+
+    this.getNumber = function()
+    {
+        return number;
+    };
+
+    this.getSuit = function()
+    {
+        return suit;
+    };
+
+    this.getValue = function()
+    {
+        if(number === 1)    return 11;
+        if(number === 11 || number === 12 || number === 13 )
+            return 10;
+        return number;
+    };
+}
+
+function Deck() {
+
+    var array = [];
+
+    for (var i = 1; i < suits.length; i++) {
+        for (var j = 1; j < numbers.length; j++) {
+            array.push(new Card(i, j));
+        }
+    }
 }
